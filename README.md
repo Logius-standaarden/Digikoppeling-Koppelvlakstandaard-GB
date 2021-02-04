@@ -1,3 +1,4 @@
-# Template-Standaard
+# Digikoppeling Koppelvlakstandaard Grote Berichten
 
-https://logius-standaarden.github.io/Template-Repository/
+- html: https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/
+- markdown: [04_content.md](04_content.md)/
