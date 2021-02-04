@@ -25,10 +25,10 @@ var respecConfig = {
   specType: "ST",
 
   // subtitle will be shown below title, can be omitted 
-  subtitle: "Hier komt een subtitle",
+  //subtitle: "Hier komt een subtitle",
 
   // The specification's "short name", which is the name used in NL_Respec URLs
-  shortName: "digikoppeling",
+  shortName: "gb",
 
   // A YYYY-MM-DD date. The publication date of the present document. 
   // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
@@ -109,10 +109,15 @@ var respecConfig = {
 
   // The specification's publish domain, which is used to publish the specification
   // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
-  pubDomain: "adr",
+  pubDomain: "dk",
+  pubSubDomain: "gb",
 
   // For Consultatieversies (specStatus="GN-CV") there is a default text in the section "Status of this document" that contains an emailaddress for feedback and comments on the document.
   nl_emailComments: "digikoppeling@logius.nl",
+
+  // this parameter will add the tag_name of the latest release to the document Title
+  // only set this parameter when a release has been set
+  nl_addReleaseTagTitle: true,
 
   // if you use a single document for your spec, which uses more than one markdown H1 header, e.g. '# inleiding'
   // this configuration can be set to make sure that the alle H1 headers and navigation bars are preserved
@@ -181,20 +186,6 @@ var respecConfig = {
       authors: ["Logius Centrum voor standaarden"],
       date: "december 2020",
       publisher: "Logius",
-    },
-    UMMR10: {
-      href: "https://unece.org/DAM/cefact/umm/UMM_Revision_10_2001.zip",
-      title: "UMM Revision 10",
-      authors: [""],
-      date: "2001",
-      publisher: "UN/CEFACT",
-    },
-    UMMUG: {
-      href: "www.unece.org/fileadmin/DAM/cefact/umm/UMM_userguide_220606.pdf",
-      title: "UN/CEFACT Modeling Methodology (UMM) User Guide",
-      authors: [""],
-      date: "2003",
-      publisher: "UN/CEFACT",
     },
     "Digikoppeling Beveiligingsdocument": {
       href: "https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf",
