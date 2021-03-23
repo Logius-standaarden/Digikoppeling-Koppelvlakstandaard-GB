@@ -27,6 +27,10 @@ var respecConfig = {
   // subtitle will be shown below title, can be omitted 
   //subtitle: "Hier komt een subtitle",
 
+   // The specification's publish domain, which is used to publish the specification
+  // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
+  pubDomain: "dk",
+  
   // The specification's "short name", which is the name used in NL_Respec URLs
   shortName: "gb",
 
@@ -37,6 +41,9 @@ var respecConfig = {
 
   // A YYYY-MM-DD date. When there is a previous release of a given specification, (W3C)
   //previousPublishDate: "2021-01-31",
+
+  publishVersion: "3.8",
+  // previousPublishVersion: "3.7",
 
   // Zie https://github.com/w3c/respec/wiki/previousMaturity. Dit moet een
   // A YYYY-MM-DD date. When a previousPublishDate is specified, this is typically required as well in order to generate the "Previous Version"
@@ -101,11 +108,12 @@ var respecConfig = {
   //   },
   // ],
 
-  // You can use markdown to write ReSpec based documents.
-  // format: "markdown",
-  // TODO  Do not suse this config, it may cause a problem., use instead:
-  // <section data-format="markdown" data-include="<filename>.md"></section>
-
+  alternateFormats: [
+    {
+      label: "pdf",
+      uri: "Digikoppeling-Koppelvlakstandaard-GB.pdf",
+    },
+    ],
 
   // The specification's publish domain, which is used to publish the specification
   // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
