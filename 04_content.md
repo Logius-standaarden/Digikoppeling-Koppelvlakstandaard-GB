@@ -28,7 +28,7 @@ opgebouwd:
 
 ![Opbouw documentatie Digikoppeling](media/DK_Specificatie_structuur.png "Opbouw documentatie Digikoppeling")
 
-## Doel en scope van Digikoppeling 
+## Doel en scope van Digikoppeling
 
 Digikoppeling biedt de mogelijkheid om op een gestandaardiseerde wijze berichten
 uit te wisselen tussen partijen. De uitwisseling tussen partijen wordt in drie
@@ -58,7 +58,7 @@ de ‘body’ uitsluitend over de inhoud. In het geval van Digikoppeling grote
 berichten is een deel van de logistieke informatie opgenomen in de ‘body’ van
 het bericht in de vorm van gestandaardiseerde meta-data.
 
-### Leidend principe 
+### Leidend principe
 
 De koppelvlakstandaarden dienen te leiden tot een maximum aan interoperabiliteit
 met een minimum aan benodigde ontwikkelinspanning.
@@ -165,7 +165,7 @@ Dit document beschrijft welke gegevens er in de metadata opgenomen moeten worden
 en hoe het HTTP 1.1 protocol gebruikt moet worden voor de overdracht van het
 grote bestand.
 
-## Nieuw in deze versie 
+## Nieuw in deze versie
 
 In deze versie wordt de Digikoppeling Grote Berichten PUSH variant
 geïntroduceerd, naast de reeds bestaande PULL variant. We hebben ervoor gekozen
@@ -263,13 +263,13 @@ standaard waarin alleen het PULL principe was gespecificeerd worden voor PULL en
 PUSH aparte schema’s gehanteerd waarbij het PULL schema ongewijzigd is t.o.v. de
 vorige versie.
 
-*PULL Schema*
+### PULL Schema
 
 Het PULL schema bevat een request bericht definitie. De DK GB PULL variant laat
 de invulling van de response verder vrij en definieert alleen (size error) en
 (checksum error) in algemene zin.
 
-*PUSH Schema*
+### PUSH Schema
 
 Het PUSH schema kent een request en een response bericht definitie.
 
@@ -282,7 +282,7 @@ het responsebericht van het PUSH XML Schema wordt gebruikt moet het volledig
 worden ingevuld (D.w.z. de ontvangststatus van het grote bestand en van de
 eventuele onderdelen zowel bij succesvolle ontvangst als bij fouten).
 
-*PUSH response bericht statuscodes*
+### PUSH response bericht statuscodes
 
 De volgende statuscodes zijn voorgedefinieerd in het PUSH responsebericht:
 
