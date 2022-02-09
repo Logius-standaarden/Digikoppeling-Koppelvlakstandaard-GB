@@ -1,5 +1,3 @@
-![build](https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB/actions/workflows/build.yml/badge.svg)
-
 # Digikoppeling Koppelvlakstandaard Grote Berichten
 
 - html: https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/
