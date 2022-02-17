@@ -124,7 +124,7 @@ standaarden.
 
 <aside class="note">
 
-## Digikoppeling REST API profiel tags
+## Digikoppeling REST API profiel en Grote Berichten
 
 Naast ebXML/ebMS2 en WUS profielen kent Digikoppeling ook een REST API profiel. 
 De koppelvlakstandaard Grote Berichten is met name bedoeld en geschikt voor gebruik in de context van ebMS2 en WUS. 

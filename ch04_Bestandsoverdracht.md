@@ -41,8 +41,8 @@ hand van het OIN uit het certificaat van deze partijen.
 ## Betrouwbaarheid
 
 De noodzaak van betrouwbaarheid is afhankelijk van de context. Indien de
-bestandsoverdracht een melding (in combinatie met ebMS2) betreft, is ook
-betrouwbaarheid noodzakelijk. Indien de bestandsoverdracht een bevraging (vaak
+bestandsoverdracht een melding (bv in combinatie met ebMS2) betreft, is ook
+betrouwbaarheid noodzakelijk. Indien de bestandsoverdracht een bevraging (bv
 in combinatie met WUS) betreft, is dit niet noodzakelijk maar
 hoogstwaarschijnlijk wenselijk.
 
