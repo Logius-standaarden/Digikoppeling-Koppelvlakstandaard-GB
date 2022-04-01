@@ -241,8 +241,9 @@ Dit hoofdstuk presenteert een voorbeeld van de metadata van een bestand bij gebr
     <xs:attribute name="contextId" use="optional" />
   </xs:complexType>
   <xs:complexType name="location">
+    <xs:choice>
        <xs:element name="receiverUrl" type="tns:urlType" />
-    
+    </xs:choice>
   </xs:complexType>
   <xs:simpleType name="gb-profile" final="restriction">
     <xs:restriction base="xs:string">
