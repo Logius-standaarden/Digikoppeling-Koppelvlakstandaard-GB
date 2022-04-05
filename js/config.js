@@ -11,7 +11,7 @@ var respecConfig = {
   // TG: Versie teruggetrokken
   // BASIS, GN-BASIS: 'geen status'
 
-  specStatus: "DEF",
+  specStatus: "WV",
   // SpecType currently supported
   // NO: "Norm"
   // ST: "Standaard"

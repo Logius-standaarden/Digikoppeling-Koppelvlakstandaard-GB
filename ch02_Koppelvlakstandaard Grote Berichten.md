@@ -2,8 +2,8 @@
 
 ## Inleiding
 
-De situatie kan zich voordoen dat een WUS en/of ebMS2 bericht een grootte krijgt
-die niet meer efficiënt door de WUS/ebMS2 adapters verwerkt kan worden. Ook kan
+De situatie kan zich voordoen dat een Digikoppeling bericht een grootte krijgt
+die niet meer efficiënt door de Digikoppeling adapters verwerkt kan worden. Ook kan
 het zich voordoen dat er behoefte bestaat aan het buiten de normale procesgang
 ('out-of-band') uitwisselen van grote hoeveelheden informatie tussen systemen.
 In die gevallen zal dit “grote bericht” op een andere wijze verstuurd moeten
@@ -17,7 +17,7 @@ volgende aanpak wordt dan gehanteerd:
     cetera.
 
 - De verzender stelt metadata samen over het grote bestand en deelt deze
-    metadata in een WUS- of ebMS2-bericht [in een zgn. stuurbericht].
+    metadata in een Digikoppeling-bericht [in een zgn. stuurbericht].
 
 - Uitwisseling van het grote bestand vindt plaats via een PULL of een PUSH
     principe.   
@@ -96,7 +96,7 @@ gelden onderstaande algemene eisen:
 
 | **Referentie** | **Specificatie**                                                                                                                                                                                                                                                                                                                                                                                      |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| VW000          | Partijen MOGEN bilateraal overeen komen bij welke MiB berichtomvang de standaard Grote Berichten van toepassing is of dat volstaan kan worden met Digikoppeling WUS (bevragingen) dan wel Digikoppeling ebMS2 (meldingen) sec                                                                                                                                                                         |
+| VW000          | Partijen MOGEN bilateraal overeen komen bij welke MiB berichtomvang de standaard Grote Berichten van toepassing is of dat volstaan kan worden met een gewone Digikoppeling uitwisseling sec                                                                                                                                                                         |
 |                | Een harde grens voor de berichtomvang is lastig te bepalen en in praktische zin is er sprake van overlap. Daarom is er voor gekozen dat partijen bilaterale afspraken kunnen maken waarin afgeweken wordt van de genoemde grens onder VW001, met dien verstande dat door het bilateraal karakter het nooit als argument gebruikt kan worden om andere organisaties te verplichten hieraan te voldoen. |
 | VW001          | Als partijen niet tot overeenstemming komen MOETEN zij berichten groter dan 20 MiB via het Koppelvlak Grote Berichten afhandelen.                                                                                                                                                                                                                                                                     |
 |                | Niet elke ontvanger is in staat om grote berichten te ontvangen (en te verwerken). Daarnaast dient te worden voorkomen dat grote berichten het transactionele berichtenverkeer eventueel zouden kunnen verstoren. Daarom dient ten aanzien van de omvang een harde grens te worden afgesproken.                                                                                                       |

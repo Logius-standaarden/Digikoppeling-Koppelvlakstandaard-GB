@@ -46,6 +46,11 @@ opgebouwd:
 					<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/">DK Beveiligingsstandaarden en voorschriften</a>* </li>
 					<li>Koppelvlakstandaarden
 						<ul>
+							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/restapi/">DK Koppelvlakstandaard REST-API</a>*
+								<ul>
+									<li><i>Best-practice REST-API</i>† </li>
+								</ul>
+							</li>
 							<li> <a href="https://publicatie.centrumvoorstandaarden.nl/dk/wus/">DK Koppelvlakstandaard WUS</a>*
 								<ul>
 									<li><i><a href="https://publicatie.centrumvoorstandaarden.nl/dk/bpwus">Best-practice WUS</a></i>† </li>
@@ -116,6 +121,18 @@ Daarom wordt gekozen voor bewezen interoperabele internationale standaarden.
 Digikoppeling maakt berichtenuitwisseling mogelijk op basis van de ebXML/ebMS2
 en WUS families van standaarden inclusief de daarbij behorende verwante
 standaarden.
+
+<aside class="note">
+
+## Digikoppeling REST API profiel en Grote Berichten
+
+Naast ebXML/ebMS2 en WUS profielen kent Digikoppeling ook een REST API profiel. 
+De koppelvlakstandaard Grote Berichten is met name bedoeld en geschikt voor gebruik in de context van ebMS2 en WUS. 
+In geval van gebruik van een REST API koppelvlak zal het in veel gevallen mogelijk zijn om het grote bestand direct over te zenden. Mocht dit niet mogelijk zijn dan kan ook voor het REST API profiel gebruik gemaakt worden van de koppelvlakstandaard Grote Berichten. Het stuurbericht met de meta data over het grote bestand kan dan conform de afspraken in deze koppelvlakstandaard Grote Berichten worden opgesteld en met behulp van een (REST) API worden aangeleverd bij de ontvanger. 
+	
+	
+
+</aside>
 
 Aan te sluiten overheidsorganisaties hebben aangegeven op een uniforme manier
 (één stekker) te willen aansluiten aan Digikoppeling. Organisaties die
