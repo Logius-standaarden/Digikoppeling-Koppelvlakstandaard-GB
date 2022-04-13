@@ -1153,8 +1153,9 @@ netwerk en/of de server (service-window).</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">xs:attribute</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"contextId"</span> <span class="hljs-attr">use</span>=<span class="hljs-string">"optional"</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">xs:complexType</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"location"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xs:choice</span>&gt;</span>
        <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"receiverUrl"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tns:urlType"</span> /&gt;</span>
-    
+    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:choice</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">xs:simpleType</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"gb-profile"</span> <span class="hljs-attr">final</span>=<span class="hljs-string">"restriction"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">xs:restriction</span> <span class="hljs-attr">base</span>=<span class="hljs-string">"xs:string"</span>&gt;</span>
