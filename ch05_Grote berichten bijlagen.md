@@ -414,7 +414,7 @@ Waarbij `file.001.zip` correct is geupload en `file.002.zip` niet is gevonden.
 ```XML
 <gb:digikoppeling-external-data-references-response profile="digikoppeling-gb-4.0">
   <gb:data-reference-response>
-    <gb:compression>ZIP4J</gb:compression>/
+    <gb:compression>ZIP4J</gb:compression>
     <gb:content contentType="application/pdf">
       <gb:filename>file.pdf</gb:filename>
       <gb:checksum type="MD5">01234567890123456789012345678901</gb:checksum>
