@@ -247,7 +247,7 @@ Dit hoofdstuk presenteert een voorbeeld van de metadata van een bestand bij gebr
   </xs:complexType>
   <xs:simpleType name="gb-profile" final="restriction">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="digikoppeling-gb-2.0" />
+      <xs:enumeration value="digikoppeling-gb-4.0" />
       <!-- DigiKoppeling GB profiel aanduiding -->
     </xs:restriction>
   </xs:simpleType>
@@ -324,24 +324,21 @@ Dit hoofdstuk presenteert een voorbeeld van de metadata van een bestand bij gebr
 Hieronder volgt een voorbeeld van een Grote Berichten data-reference-request bericht voor een PDF bestand genaamd file.pdf met een grootte van 2048MB, die is ge-upload:
 
 ```XML
-<gb:Digikoppeling-external-data-references-request profile="Digikoppeling-gb-4.0">
+<gb:digikoppeling-external-data-references-request profile="digikoppeling-gb-4.0">
   <gb:data-reference-request>
-    
-    <gb:compression>none<gb:compression>
+    <gb:compression>NONE<gb:compression>
     <gb:content contentType="application/pdf">
       <gb:filename>file.pdf</gb:filename>
       <gb:checksum type="MD5">01234567890123456789012345678901</gb:checksum>
       <gb:size>2048</gb:size>
       <gb:transport>
         <gb:location>
-          <gb:receiverUrl type="xs:anyURI">
-            https://my.host.nl/files/file.pdf
-          </gb:receiverUrl>
+          <gb:receiverUrl type="xs:anyURI">https://my.host.nl/files/file.pdf</gb:receiverUrl>
         </gb:location>
       </gb:transport>
     </gb:content>
   </gb:data-reference-request>
-</gb:Digikoppeling-external-data-references-request>
+</gb:digikoppeling-external-data-references-request>
 ```
 
 ### Data-reference-response bericht 1 (PUSH)
@@ -350,9 +347,9 @@ Hieronder volgt een voorbeeld van een Grote Berichten data-reference-response be
 Waarbij file.pdf niet is gevonden.
 
 ```XML
-<gb:Digikoppeling-external-data-references-response profile="Digikoppeling-gb-4.0">
+<gb:digikoppeling-external-data-references-response profile="digikoppeling-gb-4.0">
   <gb:data-reference-response>
-    <gb:compression>none<gb:compression>
+    <gb:compression>NONE<gb:compression>
     <gb:content contentType="application/pdf">
       <gb:filename>file.pdf</gb:filename>
       <gb:checksum type="MD5">01234567890123456789012345678901</gb:checksum>
@@ -360,14 +357,12 @@ Waarbij file.pdf niet is gevonden.
       <gb:status>FILE_NOT_FOUND</gb:status>
       <gb:transport>
         <gb:location>
-          <gb:receiverUrl type="xs:anyURI">
-            https://my.host.nl/files/file.pdf
-          </gb:receiverUrl>
+          <gb:receiverUrl type="xs:anyURI">https://my.host.nl/files/file.pdf</gb:receiverUrl>
         </gb:location>
       </gb:transport>
     </gb:content>
   </gb:data-reference-response>
-</gb:Digikoppeling-external-data-references-response>
+</gb:digikoppeling-external-data-references-response>
 ```
 
 Alle errors behalve UNKNOWN_ERROR zijn recoverable en hebben geen reason nodig.
@@ -380,18 +375,16 @@ Hieronder volgt een voorbeeld van een Grote Berichten data-reference-request ber
 - file.pdf.zip met een grootte van 765MiB is ge-upload naar `https://my.host.nl/files/file.pdf.zip`
 
 ```XML
-<gb:Digikoppeling-external-data-references-request profile="Digikoppeling-gb-4.0">
+<gb:digikoppeling-external-data-references-request profile="digikoppeling-gb-4.0">
   <gb:data-reference-request>
-    <gb:compression>zip4j<gb:compression>
+    <gb:compression>ZIP4J<gb:compression>
     <gb:content contentType="application/pdf">
       <gb:filename>file.pdf</gb:filename>
       <gb:checksum type="MD5">01234567890123456789012345678901</gb:checksum>
       <gb:size>2048</gb:size>
       <gb:transport>
         <gb:location>
-          <gb:receiverUrl type="xs:anyURI">
-            https://my.host.nl/files/
-          </gb:receiverUrl>
+          <gb:receiverUrl type="xs:anyURI">https://my.host.nl/files/</gb:receiverUrl>
         </gb:location>
         <gb:part>
           <gb:filename>file.pdf.z01</gb:filename>
@@ -406,7 +399,7 @@ Hieronder volgt een voorbeeld van een Grote Berichten data-reference-request ber
       </gb:transport>
     </gb:content>
   </gb:data-reference-request>
-</gb:Digikoppeling-external-data-references-request>
+</gb:digikoppeling-external-data-references-request>
 ```
 
 ### Data-reference-response bericht 2 (PUSH)
@@ -419,9 +412,9 @@ Hieronder volgt een voorbeeld van een Grote Berichten data-reference-response be
 Waarbij `file.001.zip` correct is geupload en `file.002.zip` niet is gevonden.
 
 ```XML
-<gb:Digikoppeling-external-data-references-response profile="Digikoppeling-gb-4.0">
+<gb:digikoppeling-external-data-references-response profile="digikoppeling-gb-4.0">
   <gb:data-reference-response>
-    <gb:compression>zip4j<gb:compression>
+    <gb:compression>ZIP4J<gb:compression>
     <gb:content contentType="application/pdf">
       <gb:filename>file.pdf</gb:filename>
       <gb:checksum type="MD5">01234567890123456789012345678901</gb:checksum>
@@ -430,9 +423,7 @@ Waarbij `file.001.zip` correct is geupload en `file.002.zip` niet is gevonden.
       <gb:reason></gb:reason>
       <gb:transport>
         <gb:location>
-          <gb:receiverUrl type="xs:anyURI">
-            https://my.host.nl/files/
-          </gb:receiverUrl>
+          <gb:receiverUrl type="xs:anyURI">https://my.host.nl/files/</gb:receiverUrl>
         </gb:location>
         <gb:part>
           <gb:filename>file.pdf.z01</gb:filename>
@@ -449,7 +440,7 @@ Waarbij `file.001.zip` correct is geupload en `file.002.zip` niet is gevonden.
       </gb:transport>
     </gb:content>
   </gb:data-reference-response>
-</gb:Digikoppeling-external-data-references-response>
+</gb:digikoppeling-external-data-references-response>
 ```
 
 Alle errors behalve UNKNOWN_ERROR zijn recoverable en hebben geen reason nodig.
