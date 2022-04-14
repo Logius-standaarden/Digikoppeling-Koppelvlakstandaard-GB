@@ -352,7 +352,7 @@ Waarbij file.pdf niet is gevonden.
 ```XML
 <gb:Digikoppeling-external-data-references-response profile="Digikoppeling-gb-4.0">
   <gb:data-reference-response>
-    <gb:compression>none<gb:compression>
+    <gb:compression>none</gb:compression>
     <gb:content contentType="application/pdf">
       <gb:filename>file.pdf</gb:filename>
       <gb:checksum type="MD5">01234567890123456789012345678901</gb:checksum>
@@ -382,7 +382,7 @@ Hieronder volgt een voorbeeld van een Grote Berichten data-reference-request ber
 ```XML
 <gb:Digikoppeling-external-data-references-request profile="Digikoppeling-gb-4.0">
   <gb:data-reference-request>
-    <gb:compression>zip4j<gb:compression>
+    <gb:compression>zip4j</gb:compression>
     <gb:content contentType="application/pdf">
       <gb:filename>file.pdf</gb:filename>
       <gb:checksum type="MD5">01234567890123456789012345678901</gb:checksum>
@@ -421,7 +421,7 @@ Waarbij `file.001.zip` correct is geupload en `file.002.zip` niet is gevonden.
 ```XML
 <gb:Digikoppeling-external-data-references-response profile="Digikoppeling-gb-4.0">
   <gb:data-reference-response>
-    <gb:compression>zip4j<gb:compression>
+    <gb:compression>zip4j</gb:compression>
     <gb:content contentType="application/pdf">
       <gb:filename>file.pdf</gb:filename>
       <gb:checksum type="MD5">01234567890123456789012345678901</gb:checksum>
