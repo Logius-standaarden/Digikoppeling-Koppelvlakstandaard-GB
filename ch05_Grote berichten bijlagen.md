@@ -39,7 +39,7 @@
               <xs:element name="checksum" type="tns:checksumType" />
               <xs:element name="size" type="xs:unsignedLong" />
             </xs:sequence>
-            <xs:attribute name="contentType" use="required"                                   type="xs:string"/>
+            <xs:attribute name="contentType" use="required" type="xs:string"/>
           </xs:complexType>
         </xs:element>
         <xs:element name="transport">
