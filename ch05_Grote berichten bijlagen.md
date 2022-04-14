@@ -327,7 +327,7 @@ Hieronder volgt een voorbeeld van een Grote Berichten data-reference-request ber
 <gb:Digikoppeling-external-data-references-request profile="Digikoppeling-gb-4.0">
   <gb:data-reference-request>
     
-    <gb:compression>none<gb:compression>
+    <gb:compression>none</gb:compression>
     <gb:content contentType="application/pdf">
       <gb:filename>file.pdf</gb:filename>
       <gb:checksum type="MD5">01234567890123456789012345678901</gb:checksum>
