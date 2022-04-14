@@ -39,7 +39,7 @@
               <xs:element name="checksum" type="tns:checksumType" />
               <xs:element name="size" type="xs:unsignedLong" />
             </xs:sequence>
-            <xs:attribute name="contentType" use="required"                                   type="xs:string"/>
+            <xs:attribute name="contentType" use="required" type="xs:string"/>
           </xs:complexType>
         </xs:element>
         <xs:element name="transport">
@@ -156,7 +156,6 @@ Dit hoofdstuk presenteert een voorbeeld van de metadata van een bestand bij gebr
 ## XSD voor DK GB PUSH principe
 
 ```XML
-<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:tns="http://www.logius.nl/digikoppeling/gb/2020/09" targetNamespace="http://www.logius.nl/digikoppeling/gb/2020/09">
   <xs:element name="digikoppeling-external-data-references-request" type="tns:external-data-reference-request" />
   <xs:complexType name="external-data-reference-request">
@@ -324,8 +323,10 @@ Dit hoofdstuk presenteert een voorbeeld van de metadata van een bestand bij gebr
 Hieronder volgt een voorbeeld van een Grote Berichten data-reference-request bericht voor een PDF bestand genaamd file.pdf met een grootte van 2048MB, die is ge-upload:
 
 ```XML
-<gb:digikoppeling-external-data-references-request profile="digikoppeling-gb-4.0">
-  <gb:data-reference-request>
+<gb:digikoppeling-external-data-references-request profile="digikoppeling-gb-4.0"
+  xmlns:gb="http://www.logius.nl/digikoppeling/gb/2020/09" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+   <gb:data-reference-request>
     <gb:compression>NONE</gb:compression>
     <gb:content contentType="application/pdf">
       <gb:filename>file.pdf</gb:filename>
@@ -347,7 +348,9 @@ Hieronder volgt een voorbeeld van een Grote Berichten data-reference-response be
 Waarbij file.pdf niet is gevonden.
 
 ```XML
-<gb:digikoppeling-external-data-references-response profile="digikoppeling-gb-4.0">
+<gb:digikoppeling-external-data-references-response profile="digikoppeling-gb-4.0"
+  xmlns:gb="http://www.logius.nl/digikoppeling/gb/2020/09" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >                                            
   <gb:data-reference-response>
     <gb:compression>NONE</gb:compression>
     <gb:content contentType="application/pdf">
@@ -375,7 +378,9 @@ Hieronder volgt een voorbeeld van een Grote Berichten data-reference-request ber
 - file.pdf.zip met een grootte van 765MiB is ge-upload naar `https://my.host.nl/files/file.pdf.zip`
 
 ```XML
-<gb:digikoppeling-external-data-references-request profile="digikoppeling-gb-4.0">
+<gb:digikoppeling-external-data-references-request profile="digikoppeling-gb-4.0"                                                 
+  xmlns:gb="http://www.logius.nl/digikoppeling/gb/2020/09" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <gb:data-reference-request>
     <gb:compression>ZIP4J</gb:compression>
     <gb:content contentType="application/pdf">
@@ -412,7 +417,9 @@ Hieronder volgt een voorbeeld van een Grote Berichten data-reference-response be
 Waarbij `file.001.zip` correct is geupload en `file.002.zip` niet is gevonden.
 
 ```XML
-<gb:digikoppeling-external-data-references-response profile="digikoppeling-gb-4.0">
+<gb:digikoppeling-external-data-references-response profile="digikoppeling-gb-4.0"                                                 
+  xmlns:gb="http://www.logius.nl/digikoppeling/gb/2020/09" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
   <gb:data-reference-response>
     <gb:compression>ZIP4J</gb:compression>
     <gb:content contentType="application/pdf">
