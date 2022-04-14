@@ -236,7 +236,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 }</script>
 <link rel="stylesheet" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/LS-DEF.css"></head>
 
-<body class="h-entry"><div class="head">
+<body class="h-entry toc-inline"><div class="head">
     <a class="logo" href="https://www.logius.nl/standaarden"><img alt="Logius" height="77" id="Logius" src="https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg" width="44">
   </a> <h1 id="title" class="title">Digikoppeling Koppelvlakstandaard Grote Berichten 3.8.1</h1>
     
@@ -959,7 +959,7 @@ netwerk en/of de server (service-window).</p>
               <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checksum"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tns:checksumType"</span> /&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"size"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:unsignedLong"</span> /&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">xs:sequence</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">xs:attribute</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"contentType"</span> <span class="hljs-attr">use</span>=<span class="hljs-string">"required"</span>                                   <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:string"</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">xs:attribute</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"contentType"</span> <span class="hljs-attr">use</span>=<span class="hljs-string">"required"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:string"</span>/&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"transport"</span>&gt;</span>
@@ -1068,8 +1068,7 @@ netwerk en/of de server (service-window).</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">tns:digikoppeling-external-data-references</span>&gt;</span>
 </code></pre>
 </section><section id="xsd-voor-dk-gb-push-principe"><div class="header-wrapper"><h3 id="x5-3-xsd-voor-dk-gb-push-principe"><bdi class="secno">5.3 </bdi>XSD voor DK GB PUSH principe</h3><a class="self-link" href="#xsd-voor-dk-gb-push-principe" aria-label="Permalink for Section 5.3"></a></div>
-<pre><code class="XML hljs xml" aria-busy="false"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">xs:schema</span> <span class="hljs-attr">xmlns:xs</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema"</span> <span class="hljs-attr">elementFormDefault</span>=<span class="hljs-string">"qualified"</span> <span class="hljs-attr">xmlns:tns</span>=<span class="hljs-string">"http://www.logius.nl/digikoppeling/gb/2020/09"</span> <span class="hljs-attr">targetNamespace</span>=<span class="hljs-string">"http://www.logius.nl/digikoppeling/gb/2020/09"</span>&gt;</span>
+<pre><code class="XML hljs xml" aria-busy="false"><span class="hljs-tag">&lt;<span class="hljs-name">xs:schema</span> <span class="hljs-attr">xmlns:xs</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema"</span> <span class="hljs-attr">elementFormDefault</span>=<span class="hljs-string">"qualified"</span> <span class="hljs-attr">xmlns:tns</span>=<span class="hljs-string">"http://www.logius.nl/digikoppeling/gb/2020/09"</span> <span class="hljs-attr">targetNamespace</span>=<span class="hljs-string">"http://www.logius.nl/digikoppeling/gb/2020/09"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"digikoppeling-external-data-references-request"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tns:external-data-reference-request"</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">xs:complexType</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"external-data-reference-request"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">xs:sequence</span>&gt;</span>
@@ -1159,7 +1158,7 @@ netwerk en/of de server (service-window).</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">xs:simpleType</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"gb-profile"</span> <span class="hljs-attr">final</span>=<span class="hljs-string">"restriction"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">xs:restriction</span> <span class="hljs-attr">base</span>=<span class="hljs-string">"xs:string"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">xs:enumeration</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"digikoppeling-gb-2.0"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">xs:enumeration</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"digikoppeling-gb-4.0"</span> /&gt;</span>
       <span class="hljs-comment">&lt;!-- DigiKoppeling GB profiel aanduiding --&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">xs:restriction</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">xs:simpleType</span>&gt;</span>
@@ -1229,31 +1228,32 @@ netwerk en/of de server (service-window).</p>
 </section><section id="xml-voorbeeld-push-bericht"><div class="header-wrapper"><h3 id="x5-4-xml-voorbeeld-push-bericht"><bdi class="secno">5.4 </bdi>XML Voorbeeld PUSH Bericht</h3><a class="self-link" href="#xml-voorbeeld-push-bericht" aria-label="Permalink for Section 5.4"></a></div>
 <section id="data-reference-request-bericht-1-push"><div class="header-wrapper"><h4 id="x5-4-1-data-reference-request-bericht-1-push"><bdi class="secno">5.4.1 </bdi>Data-reference-request bericht 1 (PUSH)</h4><a class="self-link" href="#data-reference-request-bericht-1-push" aria-label="Permalink for Section 5.4.1"></a></div>
 <p>Hieronder volgt een voorbeeld van een Grote Berichten data-reference-request bericht voor een PDF bestand genaamd file.pdf met een grootte van 2048MB, die is ge-upload:</p>
-<pre><code class="XML hljs xml" aria-busy="false"><span class="hljs-tag">&lt;<span class="hljs-name">gb:Digikoppeling-external-data-references-request</span> <span class="hljs-attr">profile</span>=<span class="hljs-string">"Digikoppeling-gb-4.0"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">gb:data-reference-request</span>&gt;</span>
-    
-    <span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>none<span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>
+<pre><code class="XML hljs xml" aria-busy="false"><span class="hljs-tag">&lt;<span class="hljs-name">gb:digikoppeling-external-data-references-request</span> <span class="hljs-attr">profile</span>=<span class="hljs-string">"digikoppeling-gb-4.0"</span>
+  <span class="hljs-attr">xmlns:gb</span>=<span class="hljs-string">"http://www.logius.nl/digikoppeling/gb/2020/09"</span> 
+  <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema-instance"</span> &gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">gb:data-reference-request</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>NONE<span class="hljs-tag">&lt;/<span class="hljs-name">gb:compression</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">gb:content</span> <span class="hljs-attr">contentType</span>=<span class="hljs-string">"application/pdf"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:filename</span>&gt;</span>file.pdf<span class="hljs-tag">&lt;/<span class="hljs-name">gb:filename</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:checksum</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"MD5"</span>&gt;</span>01234567890123456789012345678901<span class="hljs-tag">&lt;/<span class="hljs-name">gb:checksum</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:size</span>&gt;</span>2048<span class="hljs-tag">&lt;/<span class="hljs-name">gb:size</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:transport</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">gb:location</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">gb:receiverUrl</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:anyURI"</span>&gt;</span>
-            https://my.host.nl/files/file.pdf
-          <span class="hljs-tag">&lt;/<span class="hljs-name">gb:receiverUrl</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">gb:receiverUrl</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:anyURI"</span>&gt;</span>https://my.host.nl/files/file.pdf<span class="hljs-tag">&lt;/<span class="hljs-name">gb:receiverUrl</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">gb:location</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">gb:transport</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">gb:content</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">gb:data-reference-request</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">gb:Digikoppeling-external-data-references-request</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">gb:digikoppeling-external-data-references-request</span>&gt;</span>
 </code></pre>
 </section><section id="data-reference-response-bericht-1-push"><div class="header-wrapper"><h4 id="x5-4-2-data-reference-response-bericht-1-push"><bdi class="secno">5.4.2 </bdi>Data-reference-response bericht 1 (PUSH)</h4><a class="self-link" href="#data-reference-response-bericht-1-push" aria-label="Permalink for Section 5.4.2"></a></div>
 <p>Hieronder volgt een voorbeeld van een Grote Berichten data-reference-response bericht voor de PDF bestand genaamd file.pdf met een grootte van 2048MiB, die is ge-upload en gezipped 
 Waarbij file.pdf niet is gevonden.</p>
-<pre><code class="XML hljs xml" aria-busy="false"><span class="hljs-tag">&lt;<span class="hljs-name">gb:Digikoppeling-external-data-references-response</span> <span class="hljs-attr">profile</span>=<span class="hljs-string">"Digikoppeling-gb-4.0"</span>&gt;</span>
+<pre><code class="XML hljs xml" aria-busy="false"><span class="hljs-tag">&lt;<span class="hljs-name">gb:digikoppeling-external-data-references-response</span> <span class="hljs-attr">profile</span>=<span class="hljs-string">"digikoppeling-gb-4.0"</span>
+  <span class="hljs-attr">xmlns:gb</span>=<span class="hljs-string">"http://www.logius.nl/digikoppeling/gb/2020/09"</span> 
+  <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema-instance"</span> &gt;</span>                                            
   <span class="hljs-tag">&lt;<span class="hljs-name">gb:data-reference-response</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>none<span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>NONE<span class="hljs-tag">&lt;/<span class="hljs-name">gb:compression</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">gb:content</span> <span class="hljs-attr">contentType</span>=<span class="hljs-string">"application/pdf"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:filename</span>&gt;</span>file.pdf<span class="hljs-tag">&lt;/<span class="hljs-name">gb:filename</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:checksum</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"MD5"</span>&gt;</span>01234567890123456789012345678901<span class="hljs-tag">&lt;/<span class="hljs-name">gb:checksum</span>&gt;</span>
@@ -1261,14 +1261,12 @@ Waarbij file.pdf niet is gevonden.</p>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:status</span>&gt;</span>FILE_NOT_FOUND<span class="hljs-tag">&lt;/<span class="hljs-name">gb:status</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:transport</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">gb:location</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">gb:receiverUrl</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:anyURI"</span>&gt;</span>
-            https://my.host.nl/files/file.pdf
-          <span class="hljs-tag">&lt;/<span class="hljs-name">gb:receiverUrl</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">gb:receiverUrl</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:anyURI"</span>&gt;</span>https://my.host.nl/files/file.pdf<span class="hljs-tag">&lt;/<span class="hljs-name">gb:receiverUrl</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">gb:location</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">gb:transport</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">gb:content</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">gb:data-reference-response</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">gb:Digikoppeling-external-data-references-response</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">gb:digikoppeling-external-data-references-response</span>&gt;</span>
 </code></pre>
 <p>Alle errors behalve UNKNOWN_ERROR zijn recoverable en hebben geen reason nodig.</p>
 </section><section id="data-reference-request-bericht-2-push"><div class="header-wrapper"><h4 id="x5-4-3-data-reference-request-bericht-2-push"><bdi class="secno">5.4.3 </bdi>Data-reference-request bericht 2 (PUSH)</h4><a class="self-link" href="#data-reference-request-bericht-2-push" aria-label="Permalink for Section 5.4.3"></a></div>
@@ -1277,18 +1275,18 @@ Waarbij file.pdf niet is gevonden.</p>
 <li>file.pdf.z01 met een grootte van 1024MiB is ge-upload naar <code>https://my.host.nl/files/file.pdf.z01</code></li>
 <li>file.pdf.zip met een grootte van 765MiB is ge-upload naar <code>https://my.host.nl/files/file.pdf.zip</code></li>
 </ul>
-<pre><code class="XML hljs xml" aria-busy="false"><span class="hljs-tag">&lt;<span class="hljs-name">gb:Digikoppeling-external-data-references-request</span> <span class="hljs-attr">profile</span>=<span class="hljs-string">"Digikoppeling-gb-4.0"</span>&gt;</span>
+<pre><code class="XML hljs xml" aria-busy="false"><span class="hljs-tag">&lt;<span class="hljs-name">gb:digikoppeling-external-data-references-request</span> <span class="hljs-attr">profile</span>=<span class="hljs-string">"digikoppeling-gb-4.0"</span>                                                 
+  <span class="hljs-attr">xmlns:gb</span>=<span class="hljs-string">"http://www.logius.nl/digikoppeling/gb/2020/09"</span> 
+  <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema-instance"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">gb:data-reference-request</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>zip4j<span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>ZIP4J<span class="hljs-tag">&lt;/<span class="hljs-name">gb:compression</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">gb:content</span> <span class="hljs-attr">contentType</span>=<span class="hljs-string">"application/pdf"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:filename</span>&gt;</span>file.pdf<span class="hljs-tag">&lt;/<span class="hljs-name">gb:filename</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:checksum</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"MD5"</span>&gt;</span>01234567890123456789012345678901<span class="hljs-tag">&lt;/<span class="hljs-name">gb:checksum</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:size</span>&gt;</span>2048<span class="hljs-tag">&lt;/<span class="hljs-name">gb:size</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:transport</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">gb:location</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">gb:receiverUrl</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:anyURI"</span>&gt;</span>
-            https://my.host.nl/files/
-          <span class="hljs-tag">&lt;/<span class="hljs-name">gb:receiverUrl</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">gb:receiverUrl</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:anyURI"</span>&gt;</span>https://my.host.nl/files/<span class="hljs-tag">&lt;/<span class="hljs-name">gb:receiverUrl</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">gb:location</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">gb:part</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">gb:filename</span>&gt;</span>file.pdf.z01<span class="hljs-tag">&lt;/<span class="hljs-name">gb:filename</span>&gt;</span>
@@ -1303,7 +1301,7 @@ Waarbij file.pdf niet is gevonden.</p>
       <span class="hljs-tag">&lt;/<span class="hljs-name">gb:transport</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">gb:content</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">gb:data-reference-request</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">gb:Digikoppeling-external-data-references-request</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">gb:digikoppeling-external-data-references-request</span>&gt;</span>
 </code></pre>
 </section><section id="data-reference-response-bericht-2-push"><div class="header-wrapper"><h4 id="x5-4-4-data-reference-response-bericht-2-push"><bdi class="secno">5.4.4 </bdi>Data-reference-response bericht 2 (PUSH)</h4><a class="self-link" href="#data-reference-response-bericht-2-push" aria-label="Permalink for Section 5.4.4"></a></div>
 <p>Hieronder volgt een voorbeeld van een Grote Berichten data-reference-response bericht voor de PDF bestand genaamd file.pdf met een grootte van 2048MB, die is ge-upload en gezipped in de volgende 2 zip parts:</p>
@@ -1312,9 +1310,11 @@ Waarbij file.pdf niet is gevonden.</p>
 <li>file.002.zip met een grootte van 765MiB is ge-upload naar <code>https://my.host.nl/files/file.002.zip</code></li>
 </ul>
 <p>Waarbij <code>file.001.zip</code> correct is geupload en <code>file.002.zip</code> niet is gevonden.</p>
-<pre><code class="XML hljs xml" aria-busy="false"><span class="hljs-tag">&lt;<span class="hljs-name">gb:Digikoppeling-external-data-references-response</span> <span class="hljs-attr">profile</span>=<span class="hljs-string">"Digikoppeling-gb-4.0"</span>&gt;</span>
+<pre><code class="XML hljs xml" aria-busy="false"><span class="hljs-tag">&lt;<span class="hljs-name">gb:digikoppeling-external-data-references-response</span> <span class="hljs-attr">profile</span>=<span class="hljs-string">"digikoppeling-gb-4.0"</span>                                                 
+  <span class="hljs-attr">xmlns:gb</span>=<span class="hljs-string">"http://www.logius.nl/digikoppeling/gb/2020/09"</span> 
+  <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema-instance"</span> &gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">gb:data-reference-response</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>zip4j<span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">gb:compression</span>&gt;</span>ZIP4J<span class="hljs-tag">&lt;/<span class="hljs-name">gb:compression</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">gb:content</span> <span class="hljs-attr">contentType</span>=<span class="hljs-string">"application/pdf"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:filename</span>&gt;</span>file.pdf<span class="hljs-tag">&lt;/<span class="hljs-name">gb:filename</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:checksum</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"MD5"</span>&gt;</span>01234567890123456789012345678901<span class="hljs-tag">&lt;/<span class="hljs-name">gb:checksum</span>&gt;</span>
@@ -1323,9 +1323,7 @@ Waarbij file.pdf niet is gevonden.</p>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:reason</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">gb:reason</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">gb:transport</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">gb:location</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">gb:receiverUrl</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:anyURI"</span>&gt;</span>
-            https://my.host.nl/files/
-          <span class="hljs-tag">&lt;/<span class="hljs-name">gb:receiverUrl</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">gb:receiverUrl</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"xs:anyURI"</span>&gt;</span>https://my.host.nl/files/<span class="hljs-tag">&lt;/<span class="hljs-name">gb:receiverUrl</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">gb:location</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">gb:part</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">gb:filename</span>&gt;</span>file.pdf.z01<span class="hljs-tag">&lt;/<span class="hljs-name">gb:filename</span>&gt;</span>
@@ -1342,7 +1340,7 @@ Waarbij file.pdf niet is gevonden.</p>
       <span class="hljs-tag">&lt;/<span class="hljs-name">gb:transport</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">gb:content</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">gb:data-reference-response</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">gb:Digikoppeling-external-data-references-response</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">gb:digikoppeling-external-data-references-response</span>&gt;</span>
 </code></pre>
 <p>Alle errors behalve UNKNOWN_ERROR zijn recoverable en hebben geen reason nodig.</p>
 </section></section></section>
