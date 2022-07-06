@@ -1,10 +1,23 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 32.1.2 Logius profile 20220405">
+<meta name="generator" content="ReSpec 32.1.10 Logius profile 20220628">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
 <style>
 dfn{cursor:pointer}
-.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
 .dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
 .dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
@@ -236,7 +249,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 }</script>
 <link rel="stylesheet" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/LS-DEF.css"></head>
 
-<body class="h-entry toc-inline"><div class="head">
+<body class="h-entry"><div class="head">
     <a class="logo" href="https://www.logius.nl/standaarden"><img alt="Logius" height="77" id="Logius" src="https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg" width="44">
   </a> <h1 id="title" class="title">Digikoppeling Koppelvlakstandaard Grote Berichten 3.8.1</h1>
     
@@ -413,7 +426,7 @@ zowel (service) aanbieders als (service) afnemers.</p>
 </section><section id="opbouw-digikoppeling-documentatie"><div class="header-wrapper"><h3 id="x1-2-opbouw-digikoppeling-documentatie"><bdi class="secno">1.2 </bdi>Opbouw Digikoppeling documentatie</h3><a class="self-link" href="#opbouw-digikoppeling-documentatie" aria-label="Permalink for Section 1.2"></a></div>
 <p>Digikoppeling is beschreven in een set van documenten. Deze set is als volgt
 opgebouwd:</p>
-<p><figure id="fig-opbouw-documentatie-digikoppeling"><img src="media/DK_Specificatie_structuur.svg" alt="Overzicht van de onderdelen van de Digikoppeling Standaard, de standaard is onderverdeeld in normatieve en ondersteunende onderdelen" title="Opbouw documentatie Digikoppeling"><figcaption>Figuur <bdi class="figno">1</bdi> <span class="fig-title">Opbouw documentatie Digikoppeling</span></figcaption></figure></p>
+<p><figure id="fig-opbouw-documentatie-digikoppeling"><img src="media/DK_Specificatie_structuur.svg" alt="Overzicht van de onderdelen van de Digikoppeling Standaard, de standaard is onderverdeeld in normatieve en ondersteunende onderdelen" title="Opbouw documentatie Digikoppeling" height="837" width="1327"><figcaption>Figuur <bdi class="figno">1</bdi> <span class="fig-title">Opbouw documentatie Digikoppeling</span></figcaption></figure></p>
 <details>
     <summary> Tekstalternatief </summary>
 <ul>
@@ -498,13 +511,13 @@ met een minimum aan benodigde ontwikkelinspanning.</p>
 <p>Digikoppeling maakt berichtenuitwisseling mogelijk op basis van de ebXML/ebMS2
 en WUS families van standaarden inclusief de daarbij behorende verwante
 standaarden.</p>
-<aside class="note">
+<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="5"><span>Noot</span></div><aside class="">
 
 <div class="header-wrapper"><h4 id="digikoppeling-rest-api-profiel-en-grote-berichten">Digikoppeling REST API profiel en Grote Berichten</h4><a class="self-link" href="#digikoppeling-rest-api-profiel-en-grote-berichten" aria-label="Permalink for this Section"></a></div>
 <p>Naast ebXML/ebMS2 en WUS profielen kent Digikoppeling ook een REST API profiel. 
 De koppelvlakstandaard Grote Berichten is met name bedoeld en geschikt voor gebruik in de context van ebMS2 en WUS. 
 In geval van gebruik van een REST API koppelvlak zal het in veel gevallen mogelijk zijn om het grote bestand direct over te zenden. Mocht dit niet mogelijk zijn dan kan ook voor het REST API profiel gebruik gemaakt worden van de koppelvlakstandaard Grote Berichten. Het stuurbericht met de meta data over het grote bestand kan dan conform de afspraken in deze koppelvlakstandaard Grote Berichten worden opgesteld en met behulp van een (REST) API worden aangeleverd bij de ontvanger. </p>
-</aside>
+</aside></div>
 
 <p>Aan te sluiten overheidsorganisaties hebben aangegeven op een uniforme manier
 (één stekker) te willen aansluiten aan Digikoppeling. Organisaties die
@@ -592,7 +605,7 @@ omdat de voorwaarden en regels voor beide richtingen vrijwel identiek zijn.</p>
 <p>Het principe is dat de verzender het grote bestand aanbiedt via een Grote
 Berichten File Service en een bericht stuurt aan de ontvanger dat het bericht
 geplaatst is, de ontvanger kan het bestand vervolgens ophalen.</p>
-<p><figure id="fig-uitwisseling-groot-bestand-via-grote-berichten-file-service-van-de-zender"><img src="media/UitwisselingGrootbestandviaGBfileservice_zender.png" alt="Uitwisseling groot bestand via Grote Berichten file service van de zender" title="Uitwisseling groot bestand via Grote Berichten file service van de zender"><figcaption>Figuur <bdi class="figno">2</bdi> <span class="fig-title">Uitwisseling groot bestand via Grote Berichten file service van de zender</span></figcaption></figure></p>
+<p><figure id="fig-uitwisseling-groot-bestand-via-grote-berichten-file-service-van-de-zender"><img src="media/UitwisselingGrootbestandviaGBfileservice_zender.png" alt="Uitwisseling groot bestand via Grote Berichten file service van de zender" title="Uitwisseling groot bestand via Grote Berichten file service van de zender" height="414" width="919"><figcaption>Figuur <bdi class="figno">2</bdi> <span class="fig-title">Uitwisseling groot bestand via Grote Berichten file service van de zender</span></figcaption></figure></p>
 <p>In bovenstaand figuur is dit grafisch weergegeven.</p>
 <ul>
 <li><p>Stap 1: De verzender verstuurt het bericht met de meta-data van het bestand,
@@ -609,7 +622,7 @@ dit in meerdere delen gesplitst als dit wenselijk is.</p>
 Berichten File Service van de ontvanger (via een upload) en een bericht stuurt
 aan de ontvanger dat het grote bestand verstuurd is, de ontvanger kan het
 bestand vervolgens verwerken.</p>
-<p><figure id="fig-uitwisseling-groot-bestand-via-grote-berichten-file-service-van-de-ontvanger"><img src="media/UitwisselingGrootbestandviaGBfileservice_ontvanger.png" alt="Uitwisseling groot bestand via Grote Berichten file service van de ontvanger" title="Uitwisseling groot bestand via Grote Berichten file service van de ontvanger"><figcaption>Figuur <bdi class="figno">3</bdi> <span class="fig-title">Uitwisseling groot bestand via Grote Berichten file service van de ontvanger</span></figcaption></figure></p>
+<p><figure id="fig-uitwisseling-groot-bestand-via-grote-berichten-file-service-van-de-ontvanger"><img src="media/UitwisselingGrootbestandviaGBfileservice_ontvanger.png" alt="Uitwisseling groot bestand via Grote Berichten file service van de ontvanger" title="Uitwisseling groot bestand via Grote Berichten file service van de ontvanger" height="415" width="923"><figcaption>Figuur <bdi class="figno">3</bdi> <span class="fig-title">Uitwisseling groot bestand via Grote Berichten file service van de ontvanger</span></figcaption></figure></p>
 <p>In bovenstaand figuur is dit grafisch weergegeven.</p>
 <ul>
 <li><p>Stap 1: De verzender verstuurt het grote bericht naar de Grote berichten File
