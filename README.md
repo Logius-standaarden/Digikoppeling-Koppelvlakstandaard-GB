@@ -1,6 +1,5 @@
 # Digikoppeling Koppelvlakstandaard Grote Berichten
 
-- html: https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/
-- html: https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/snapshot.html
-- markdown: [04_content.md](04_content.md)/
-- PDF-versie: https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB/blob/master/Digikoppeling-Koppelvlakstandaard-GB.pdf
+- Gepubliceerde versie: https://gitdocumentatie.logius.nl/publicatie/dk/gb/
+- Werkversie: https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/
+- PDF: https://gitdocumentatie.logius.nl/publicatie/dk/gb/Digikoppeling-Koppelvlakstandaard-GB.pdf
