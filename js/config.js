@@ -27,6 +27,6 @@ var respecConfig = {
   publishDate: "2022-04-11",
   publishVersion: "3.8.1",
   shortName: "gb",
-  specStatus: "WV",
+  specStatus: "DEF",
   specType: "ST"
 };
