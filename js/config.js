@@ -12,6 +12,14 @@ var respecConfig = {
         "name" : "Peter Haasnoot",
         "url" : "https://logius.nl/standaarden"
       },
+          { 
+        "name" : "Alexander Green",
+        "url" : "https://logius.nl/standaarden"
+      },
+          { 
+        "name" : "Martin van der Plas",
+        "url" : "https://logius.nl/standaarden"
+      },
       { 
         "company" : "Logius",
         "companyURL" : "https://logius.nl/standaarden",
@@ -20,12 +28,12 @@ var respecConfig = {
       }
     ],
   github: "https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB",
-  previousPublishDate: "2020-09-09",
-  previousPublishVersion: "3.8",
+  previousPublishDate: "2022-04-11",
+  previousPublishVersion: "3.8.1",
   pubDomain: "dk",
   pubSubDomain: "gb",
-  publishDate: "2022-04-11",
-  publishVersion: "3.8.1",
+  publishDate: "2025-06-00",
+  publishVersion: "3.9.0",
   shortName: "gb",
   specStatus: "WV",
   specType: "ST"
