@@ -57,9 +57,7 @@ opgebouwd:
 <b>Beheer</b>
 
 - De standaarddocumenten (groen/vierkant aangegeven) vallen onder het beheer zoals geformaliseerd in het document [[[?DK-Beheermodel]]].
-
 - De ondersteunende documentatie wordt onderhouden door Logius als de beheerder van de standaard (en afgestemd met stakeholders/ gebruikers).
-
 - Alle goedgekeurde documenten zijn te vinden op de website van Logius, [www.logius.nl](https://www.logius.nl/onze-dienstverlening/domeinen/gegevensuitwisseling/digikoppeling).
 
 ## Doel en scope van Digikoppeling
@@ -85,12 +83,7 @@ lagen opgedeeld:
 
     het bericht.
 
-Digikoppeling richt zich dus uitsluitend op de logistieke laag. Deze afspraken
-komen in de koppelvlakstandaards en andere voorzieningen. In het geval van WUS
-en ebMS2 komt de logistieke laag overeen met de ‘header’ van het bericht en gaat
-de ‘body’ uitsluitend over de inhoud. In het geval van Digikoppeling grote
-berichten is een deel van de logistieke informatie opgenomen in de ‘body’ van
-het bericht in de vorm van gestandaardiseerde meta-data.
+Digikoppeling richt zich dus uitsluitend op de logistieke laag. Deze afspraken komen in de koppelvlakstandaards en andere voorzieningen. In het geval van WUS en ebMS2 komt de logistieke laag overeen met de ‘header’ van het bericht en gaat de ‘body’ uitsluitend over de inhoud. In het geval van Digikoppeling grote berichten is een deel van de logistieke informatie opgenomen in de ‘body’ van het bericht in de vorm van gestandaardiseerde meta-data of een API Specificatie.
 
 ### Leidend principe
 
@@ -99,74 +92,44 @@ met een minimum aan benodigde ontwikkelinspanning.
 
 Daarom wordt gekozen voor bewezen interoperabele internationale standaarden.
 
-Digikoppeling maakt berichtenuitwisseling mogelijk op basis van de ebXML/ebMS2
-en WUS families van standaarden inclusief de daarbij behorende verwante
-standaarden.
+Digikoppeling maakt berichtenuitwisseling mogelijk op basis van ebMS2, WUS (SOAP) & REst API's inclusief de daarbij behorende verwante standaarden.
 
 <aside class="note">
 
 ## Digikoppeling REST API profiel en Grote Berichten
 
-Naast ebXML/ebMS2 en WUS profielen kent Digikoppeling ook een REST API profiel. 
-De koppelvlakstandaard Grote Berichten is met name bedoeld en geschikt voor gebruik in de context van ebMS2 en WUS. 
-In geval van gebruik van een REST API koppelvlak zal het in veel gevallen mogelijk zijn om het grote bestand direct over te zenden. Mocht dit niet mogelijk zijn dan kan ook voor het REST API profiel gebruik gemaakt worden van de koppelvlakstandaard Grote Berichten. Het stuurbericht met de meta data over het grote bestand kan dan conform de afspraken in deze koppelvlakstandaard Grote Berichten worden opgesteld en met behulp van een (REST) API worden aangeleverd bij de ontvanger. 
-	
-	
+Naast ebMS2 en WUS profielen kent Digikoppeling ook een REST API profiel.
+De koppelvlakstandaard Grote Berichten is initieel ontwikkeld en geschikt voor gebruik in de context van ebMS2, WUS, SOAP en XML.
+Bij het gebruik van een REST API koppelvlak adviseren we de toepassing van het S3 API interactie profiel. Alhoewel dit geen formele vastgestelde standaard is blijkt in de praktijk dat dit de defacto standaard is voor veel uitwisseling van grote berichten. Vele organisaties bieden systemen, libraries en functionaliteit aan die compatible is met de [Amazon S3 API Documentation](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) Met versie 3.9 van deze standaard willen we dan ook het gebruik van deze defacto standaard als alternatief toevoegen aan de Digikoppeling Grote Berichten standaard en het daarmee voor aanbieders en afnemers mogelijk maken om de S3 API toe te passen voor uitwisseling van Grote Berichten.
 
 </aside>
 
-Aan te sluiten overheidsorganisaties hebben aangegeven op een uniforme manier
-(één stekker) te willen aansluiten aan Digikoppeling. Organisaties die
-beschikken over eigen middleware (ESB, Broker, Gateway) kunnen de aansluiting
-aan Digikoppeling, de adapters, in het algemeen realiseren via voorzieningen in
-die middleware.
+Aan te sluiten overheidsorganisaties hebben aangegeven op een uniforme manier (één stekker) te willen aansluiten aan Digikoppeling. Organisaties die beschikken over eigen middleware (ESB, Broker, Gateway) kunnen de aansluiting aan Digikoppeling, de adapters, in het algemeen realiseren via voorzieningen in die middleware.
 
-De architectuur voor toepassing van Digikoppeling standaard is beschreven in het
-document “Digikoppeling\_Architectuur”.
+De architectuur voor toepassing van Digikoppeling standaard is beschreven in het document “Digikoppeling\_Architectuur”.
 
 ## Koppelvlak & koppelvlakstandaard
 
-Een koppelvlak is een interface die volgens standaarden de gegevensuitwisseling
-verzorgt. Het werken met vaste standaarden is essentieel voor een koppelvlak.
-Hierdoor wordt implementatie vergemakkelijkt. Ook wordt het mogelijk diverse
-soorten berichten door te sturen met een grote mate van interoperabiliteit,
-omdat via de standaard afspraken over hun inhoud gemaakt is.
+Een koppelvlak is een interface die volgens standaarden de gegevensuitwisseling verzorgt. Het werken met vaste standaarden is essentieel voor een koppelvlak. Hierdoor wordt implementatie vergemakkelijkt. Ook wordt het mogelijk diverse soorten berichten door te sturen met een grote mate van interoperabiliteit, omdat via de standaard afspraken over de berichtuitwisseling zijn gemaakt.
 
-Een van de belangrijkste eisen die door de overheid gesteld worden bij de
-inrichting van generieke voorzieningen is dat er niet veel maatwerk ontwikkeld
-hoeft te worden, maar dat er van “off the shelf” commercieel of OPEN geleverde
-software gebruik gemaakt kan worden. Voor Digikoppeling, dus voor de logistieke
-laag, betreft dat het niet willen ontwikkelen van software voor de adapters. Dit
-doel kan bereikt (benaderd) worden doordat gekozen wordt voor internationale (de
-jure of de facto) vastgelegde standaards, die door “alle” leveranciers
-interoperabel zijn geïmplementeerd.
+Een van de belangrijkste eisen die door de overheid gesteld worden bij de inrichting van generieke voorzieningen is dat er niet veel maatwerk ontwikkeld hoeft te worden, maar dat er van “off the shelf” commercieel of OPEN geleverde software gebruik gemaakt kan worden. Voor Digikoppeling, dus voor de logistieke laag, betreft dat het niet willen ontwikkelen van software voor gateways en adapters. Dit doel kan bereikt (benaderd) worden doordat gekozen wordt voor internationale (de-jure of defacto) vastgelegde standaards, die door “alle” leveranciers interoperabel zijn geïmplementeerd.
 
-Een andere eis is dat met name afnemers gebruik kunnen maken van één “stekker”
-(één logistiek koppelpunt).
+Een andere eis is dat met name afnemers gebruik kunnen maken van één “stekker” (één logistiek koppelpunt).
 
 ### Specificatie van de koppelvlakstandaard
 
-De koppelvlakspecificatie beschrijft de eisen waar de adapters aan moeten
-voldoen om interoperabel met elkaar te kunnen communiceren.
+De koppelvlakspecificatie beschrijft de eisen waar de gateways en adapters aan moeten voldoen om interoperabel met elkaar te kunnen communiceren.
 
-De Digikoppeling Grote Berichten Standaard beschrijft dan ook niet de inhoud van
-het grote bericht. Wel richt de standaard zich op de beschrijving (metadata) van
-het grote bericht.
+De Digikoppeling Grote Berichten Standaard beschrijft dan ook niet de inhoud van het grote bericht. Wel richt de standaard zich op de beschrijving (metadata) van het grote bericht.
 
 ## Opbouw van dit document
 
-Hoofdstuk 1 bevat een aantal algemene inleidende onderwerpen. Hoofdstuk 2 bevat
-de kern van de standaard met de algemene gebruiksvoorwaarden.
-
+Hoofdstuk 1 bevat een aantal algemene inleidende onderwerpen. 
+Hoofdstuk 2 bevat de kern van de standaard met de algemene gebruiksvoorwaarden.
 Hoofdstuk 3 gaat in op het gebruik van de metadata.
-
 Hoofdstuk 4 gaat in op de wijze waarop grote bestanden uitgewisseld worden.
-
 Hoofdstuk 5 bevat de referenties en bijlagen.
-
-Begrippen en afkortingen worden toegelicht in het document
-“Digikoppeling\_Architectuur”.
+Begrippen en afkortingen worden toegelicht in het document “Digikoppeling\_Architectuur”.
 
 Dit document en andere documentatie is beschikbaar op
 [www.logius.nl/Digikoppeling](http://www.logius.nl/digikoppeling)
-
