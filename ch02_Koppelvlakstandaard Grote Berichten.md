@@ -2,49 +2,23 @@
 
 ## Inleiding
 
-De situatie kan zich voordoen dat een Digikoppeling bericht een grootte krijgt
-die niet meer efficiënt door de Digikoppeling adapters verwerkt kan worden. Ook kan
-het zich voordoen dat er behoefte bestaat aan het buiten de normale procesgang
-('out-of-band') uitwisselen van grote hoeveelheden informatie tussen systemen.
-In die gevallen zal dit “grote bericht” op een andere wijze verstuurd moeten
-worden: middels de Digikoppeling Koppelvlakstandaard Grote Berichten. De
-volgende aanpak wordt dan gehanteerd:
+De situatie kan zich voordoen dat een bericht een grootte krijgt die niet meer efficiënt door de gateways en adapters verwerkt kan worden. Ook kan het zich voordoen dat er behoefte bestaat aan het buiten de normale procesgang ('out-of-band') uitwisselen van grote hoeveelheden gegevens tussen systemen. In die gevallen zal dit “grote bericht” in een ander proces of operatie verstuurd moeten worden: middels de Digikoppeling Koppelvlakstandaard Grote Berichten. De volgende aanpak wordt dan gehanteerd:
 
-- De verzender stelt een bestand samen uit (een deel van) de gegevens die
-    normaliter in het “grote bericht” verzonden zou worden. Het resultaat wordt
-    aangeduid met de term “groot bestand”. Merk op dat dit ook een “groot” xml
-    bestand kan zijn, een CAD bestand, een PDF document, een ZIP bestand, et
-    cetera.
+- De verzender stelt een bestand samen uit (een deel van) de gegevens die normaliter in het “grote bericht” verzonden zou worden. Het resultaat wordt aangeduid met de term “groot bestand”. Merk op dat dit ook een “groot” xml bestand kan zijn, een CAD bestand, een PDF document, een ZIP bestand, et cetera.
+- De verzender stelt metadata samen over het grote bestand en deelt deze metadata in een Digikoppeling-bericht [in een zgn. stuurbericht].
+- Uitwisseling van het grote bestand vindt plaats via een PULL of een PUSH principe.
+  - Bij Het PULL principe biedt de verzender het groot bestand aan via een Grote Berichten File service aan de ontvanger.  
+  - Bij het PUSH principe stuurt de verzender het groot bestand naar de Grote Berichten File service van de ontvanger
 
-- De verzender stelt metadata samen over het grote bestand en deelt deze
-    metadata in een Digikoppeling-bericht [in een zgn. stuurbericht].
+- De bestandsoverdracht is niet “betrouwbaar”; hiervoor dient de ontvanger aanvullende maatregelen te implementeren (retry-mechanisme, foutafhandeling). De Koppelvlakstandaard bevat hiervoor handvatten. Toepassing van deze handvatten in concrete implementaties vallen buiten de scope van het koppelvlak.
 
-- Uitwisseling van het grote bestand vindt plaats via een PULL of een PUSH
-    principe.   
-    Bij Het PULL principe biedt de verzender het groot bestand aan via een Grote
-    Berichten File service aan de ontvanger.  
-    Bij het PUSH principe stuurt de verzender het groot bestand naar de Grote
-    Berichten File service van de ontvanger
+> Merk op dat het stuurbericht naast metadata ook voorzien kan zijn van inhoudelijke informatie die al nodig is bij de verwerking van het bericht.
 
-- De bestandsoverdracht is niet “betrouwbaar”; hiervoor dient de ontvanger
-    aanvullende maatregelen te implementeren (retry-mechanisme,
-    foutafhandeling). De Koppelvlakstandaard bevat hiervoor handvatten.
-    Toepassing van deze handvatten in concrete implementaties vallen buiten de
-    scope van het koppelvlak.
-
-Merk op dat het stuurbericht naast metadata ook voorzien kan zijn van
-inhoudelijke informatie die al nodig is bij de verwerking van het bericht.
-
-Dit document beschrijft welke gegevens er in de metadata opgenomen moeten worden
-en hoe het HTTP 1.1 protocol gebruikt moet worden voor de overdracht van het
-grote bestand.
+Dit document beschrijft welke gegevens er in de metadata opgenomen moeten worden en hoe het HTTP 1.1 protocol gebruikt moet worden voor de overdracht van het grote bestand.
 
 ## Nieuw in deze versie
 
-In deze versie wordt de Digikoppeling Grote Berichten PUSH variant
-geïntroduceerd, naast de reeds bestaande PULL variant. We hebben ervoor gekozen
-de beschrijving van de PULL variant te integreren in de bestaande PUSH versie,
-omdat de voorwaarden en regels voor beide richtingen vrijwel identiek zijn.
+In deze versie wordt de Digikoppeling Grote Berichten PULL en PUSH de S3 variant geïntroduceerd, naast de reeds bestaande varianten. We hebben ervoor gekozen de beschrijving van de S3 variant te integreren in de bestaande versie, omdat de voorwaarden en regels voor verschillende varianten vrijwel identiek zijn en we de technische werking zo beter kunnen vergelijken.
 
 ## Verzenden van Grote Berichten
 
