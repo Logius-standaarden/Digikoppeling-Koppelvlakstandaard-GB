@@ -1,4 +1,6 @@
-var respecConfig = {
+import { loadRespecWithConfiguration } from "https://logius-standaarden.github.io/publicatie/respec/organisation-config.mjs";
+
+loadRespecWithConfiguration({
   alternateFormats: [ { 
         "label" : "pdf",
         "uri" : "Digikoppeling-Koppelvlakstandaard-GB.pdf"
@@ -29,4 +31,4 @@ var respecConfig = {
   shortName: "gb",
   specStatus: "WV",
   specType: "ST"
-};
+});
