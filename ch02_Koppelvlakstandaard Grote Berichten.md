@@ -89,6 +89,15 @@ Opmerking
 De verzender maakt hiervoor het te verzenden bestand gereed, eventueel wordt dit
 in meerdere delen gesplitst als dit wenselijk is.
 
+### Poll Principe
+
+Het principe is dat de verzender het grote bestand aanbiedt via een Grote
+Berichten File Service. Op een generiek endpoint bij de verzender kan de ontvanger
+actief en periodiek bekijken of er een bestand klaarstaat.
+
+Indien er een bestand klaarstaat zal de endpoint antwoorden met metadata identiek aan het stuurbericht bij de bovenstaande principes.
+Vervolgens haalt de ontvanger het bestand op door middel van de reguliere PULL-methode.
+
 ## Gebruiksvoorwaarden
 
 Voor het gebruik van het Digikoppeling Koppelvlakstandaard Grote Berichten
