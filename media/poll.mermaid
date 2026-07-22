@@ -1,0 +1,5 @@
+sequenceDiagram
+    Ontvanger->>+Verzender: POLL-verzoek (HTTP GET)
+    Verzender->>-Ontvanger: Metadata
+    Ontvanger->>+Verzender: Bestandverzoek (HTTP GET)
+    Verzender->>-Ontvanger: Groot bericht

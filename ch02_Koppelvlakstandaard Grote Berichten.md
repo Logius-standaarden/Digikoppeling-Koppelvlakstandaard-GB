@@ -98,6 +98,21 @@ actief en periodiek bekijken of er een bestand klaarstaat.
 Indien er een bestand klaarstaat zal de endpoint antwoorden met metadata identiek aan het stuurbericht bij de bovenstaande principes.
 Vervolgens haalt de ontvanger het bestand op door middel van de reguliere PULL-methode.
 
+<figure>
+   <div class="mermaid" data-figure-name="poll.mermaid">
+   </div>
+   <figcaption>Uitwisseling groot bestand via Grote Berichten file service van de verzender</figcaption>
+</figure>
+
+In bovenstaand figuur is dit grafisch weergegeven.
+
+- Stap 1: De ontvanger vraagt naar bestandbeschikbaarheid bij het POLL-endpoint van de verzender.
+- Stap 2: De verzender verstuurt het bericht met de meta-data van het bestand,
+bijvoorbeeld naam, locatie, grootte etc.
+Indien er geen bestand gereedstaat is het antwoord leeg.
+- Stap 3: De ontvanger vraagt naar het bestand bij het endpoint uit de metadata.
+- Stap 4: De verzender verstuurt het bestand.
+
 ## Gebruiksvoorwaarden
 
 Voor het gebruik van het Digikoppeling Koppelvlakstandaard Grote Berichten
