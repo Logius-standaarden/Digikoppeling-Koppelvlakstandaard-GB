@@ -1,4 +1,5 @@
 import { loadRespecWithConfiguration } from "https://logius-standaarden.github.io/publicatie/respec/organisation-config.mjs";
+import { generateMermaidFigures } from "https://logius-standaarden.github.io/publicatie/respec/plugins/mermaid.mjs";
 
 loadRespecWithConfiguration({
   authors: [ { 
@@ -8,13 +9,7 @@ loadRespecWithConfiguration({
   editors: [ 
       { 
         "name" : "Peter Haasnoot",
-        "url" : "https://logius.nl/standaarden"
-      },
-      { 
-        "company" : "Logius",
-        "companyURL" : "https://logius.nl/standaarden",
-        "mailto" : "api@digikoppeling.nl",
-        "name" : "Pieter Hering"
+        "url" : "https://logius.nl"
       }
     ],
   github: "https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB",
@@ -26,5 +21,9 @@ loadRespecWithConfiguration({
   publishVersion: "3.8.1",
   shortName: "gb",
   specStatus: "WV",
-  specType: "ST"
+  specType: "ST",
+
+  postProcess: [
+    generateMermaidFigures
+  ],
 });
