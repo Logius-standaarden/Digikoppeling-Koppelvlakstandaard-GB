@@ -2,21 +2,21 @@ import { loadRespecWithConfiguration } from "https://logius-standaarden.github.i
 
 loadRespecWithConfiguration({
   authors: [ { 
-        "name" : "Pieter Hering",
-        "url" : "https://logius.nl/standaarden"
-      } ],
+    "name" : "Pieter Hering",
+    "url" : "https://logius.nl"
+  } ],
   editors: [ 
-      { 
-        "name" : "Peter Haasnoot",
-        "url" : "https://logius.nl/standaarden"
-      },
-      { 
-        "company" : "Logius",
-        "companyURL" : "https://logius.nl/standaarden",
-        "mailto" : "api@digikoppeling.nl",
-        "name" : "Pieter Hering"
-      }
-    ],
+    {
+      "name" : "Peter Haasnoot",
+      "company" : "Logius",
+      "url" : "https://logius.nl"
+    },
+    {
+      "company" : "Logius",
+      "url" : "https://logius.nl",
+      "name" : "Pieter Hering"
+    }
+  ],
   github: "https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB",
   previousPublishDate: "2020-09-09",
   previousPublishVersion: "3.8",
