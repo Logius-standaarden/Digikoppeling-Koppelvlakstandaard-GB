@@ -3,6 +3,7 @@ import { loadRespecWithConfiguration } from "https://logius-standaarden.github.i
 loadRespecWithConfiguration({
   authors: [ { 
     "name" : "Pieter Hering",
+    "company" : "Logius",
     "url" : "https://logius.nl"
   } ],
   editors: [ 
@@ -12,9 +13,9 @@ loadRespecWithConfiguration({
       "url" : "https://logius.nl"
     },
     {
+      "name" : "Pieter Hering",
       "company" : "Logius",
-      "url" : "https://logius.nl",
-      "name" : "Pieter Hering"
+      "url" : "https://logius.nl"
     }
   ],
   github: "https://github.com/Logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB",
